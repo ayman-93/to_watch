@@ -86,14 +86,14 @@ class App extends Component {
             goToWatched={this.goToWatched}
           />
 
-          <h1>Top Rated Movies</h1>
+          <h1>Search</h1>
           <DisplayMovies
             clearSearch={this.clearSearch}
             search={this.state.search}
             movies={this.state.searchList}
             sendMovies={this.sendMovies}
           />
-          <h1>Search</h1>
+          
           <Search getSearchList={this.getSearchList} searchData={this.state.search} />
 
           {/* <CurrentMovie /> */}

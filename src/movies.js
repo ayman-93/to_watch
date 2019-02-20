@@ -10,7 +10,7 @@ class Movies extends React.Component {
                 
                 // console.log(response)
 
-                let lmovies = response.data.results.map(movie => movie)
+                let lmovies = response.data.results.map(movie => movie);
                 this.setState({ movies: lmovies });
                 this.props.getMovies(this.state.movies)
 
