@@ -20,6 +20,7 @@ class Profile extends React.Component {
               <p>{movie.overview}</p>
                     <p>Release: {movie.release_date}</p>
               <p>Rating: {movie.vote_average}</p>
+             
                    <button onClick={()=>this.props.addToWatched(movie)}>Watched</button>
             </div>
             

@@ -27,6 +27,10 @@ class App extends Component {
     this.setState({ movies: newMovies });
   };
 
+  getSearchList = newSearchList => {
+    this.setState({ searchList: newSearchList})
+  }
+
   sendMovies = m => {
     console.log("woow", m);
 
@@ -86,11 +90,11 @@ class App extends Component {
           <DisplayMovies
             clearSearch={this.clearSearch}
             search={this.state.search}
-            movies={this.state.movies}
+            movies={this.state.searchList}
             sendMovies={this.sendMovies}
           />
           <h1>Search</h1>
-          <Search searchData={this.state.search} />
+          <Search getSearchList={this.getSearchList} searchData={this.state.search} />
 
           {/* <CurrentMovie /> */}
         </div>
