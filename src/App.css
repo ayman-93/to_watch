@@ -1,33 +1,126 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  /* margin: 5px; */
+  padding: 3px;
+  background:black;
   color: white;
 }
+#head{
+  /* width: 100%;
+  height: 50px;
+ background-color: white;
+ border-radius: 40px; */
+}
+.movieInfo {
+  /* background: red; */
+  color: whitesmoke;
+  display: inline-block;
+  width: 40%
+}
+.toWatchImg {
+  display: inline-block;
+  width: 50% 
+}
+.DMovies {
+  margin-top: 10px
+}
+/* h1 {
+  color: whitesmoke;
+} */
 
-.App-link {
-  color: #61dafb;
+.sliderImg{
+  width:130px; 
+  height:200px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.displayMInfo {
+  border: 2px solid blueviolet; 
+  /* min-width: 500px; */
+  /* min-height: 500px; */
   }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+  border-radius: 15px;
+  
+  background: rgb(212, 207, 207);
+  /* margin-left: 1px; */
+  margin-top: 25px;
+  /* width: 95%; */
+  /* height: 100%; */
+  /* border: 2px solid whitesmoke; */
+}
+.d1 img {
+  /* float: right; */
+  /* max-width: 295px; */
+  /* background-size: cover;
+  background-position: center; */
+}
+.d1 {
+
+  /* display: inline-flexbox; */
+  /* border: 1px solid black; */
+  /* float: left; */
+  /* background: url('https://cdn.cinematerial.com/p/297x/9ebaqxve/maze-runner-the-death-cure-movie-poster-md.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 584px; */
+  /* max-width: 500px; */
+  /* height: 644px; */
+
+}
+.d2 {
+     /* display: inline-flexbox; */
+     color: black;
+      /* float: right; */
+       /* width: 51%; */
+       /* height: 100%; */
+       text-align: center;
+       /* display: flex; */
+       /* flex-direction: column; */
+       /* justify-content: center; */
+       /* max-width: 500px; */
+        /* border: 1px solid yellow; */
+        /* clear: both; */
+}
+.bttn{
+ /* position: relative; */
+ /* top: 100; */
+ /* z-index: 1;
+ width: 20px;
+ float:left; */
+ 
+
+ 
+}
+.buttons {
+  /* border: 1px solid blue; */
+  position: relative;
+  width: 20px !important; 
+}
+#b1{
+  position: absolute;
+  /* top:1px; */
+  height: 100%;
+  left:67px;
+background-color: black;
+}
+#b2{
+  position: absolute;
+  right: 98px;
+  top:350px;
+  border-radius:13px; 
+  /* height: 240px; */
+  /* display: none; */
+/* float:right; */
+background-color: black;
+color:white;
+
+}
+#addB {
+  background: url('https://image.flaticon.com/icons/png/512/61/61112.png') ;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+h1 {
+  /* font-family: 'Coiny', cursive; */
 }
