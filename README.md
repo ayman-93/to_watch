@@ -3,9 +3,9 @@ To watch list is a web site helps you organize what do you want to watch, it sho
 
 ## Screenshots..
 
-![ScreenShot1](screenShots/1.png)
-![ScreenShot2](screenShots/2.png)
-![ScreenShot3](screenShots/3.png)
+![ScreenShot1](src/screenShots/1.png)
+![ScreenShot2](src/screenShots/2.png)
+![ScreenShot3](src/screenShots/3.png)
 
 ## Built With
 
@@ -23,5 +23,5 @@ Thanks for everyone in the class of **GA-WDI** and especially <br />
 **[Ghadeer](https://github.com/ghadeer-x)** <br />
 **[Moath](https://github.com/mfalthaw)** <br />
 **[MicFin](https://github.com/MicFin)** <br />
-**[Usman Bashir](https://github.com/usmanbashir)**
-**[Abdulmohsin](https://github.com/abdulmohsin1994)** <br />
+**[Usman Bashir](https://github.com/usmanbashir)** <br />
+**[Abdulmohsin](https://github.com/abdulmohsin1994)** 
