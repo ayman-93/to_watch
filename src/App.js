@@ -10,6 +10,8 @@ import Profile from "./profile";
 import Header from "./header";
 import CurrentMovie from "./CurrentMovie";
 import Search from "./Search";
+import swal from 'sweetalert';
+
 
 class App extends Component {
   state = {
@@ -33,9 +35,9 @@ class App extends Component {
 
   sendMovies = m => {
     console.log("woow", m);
-
+    swal("Added to your list", "", "success");
     let cloneUserM = this.state.userMovies.slice(0);
-    if (cloneUserM.includes(m)) alert("you have it");
+    if (cloneUserM.includes(m)) swal("It's already in your list!", "", "success");
     else cloneUserM.push(m);
 
     this.setState({ userMovies: cloneUserM });
@@ -45,8 +47,8 @@ class App extends Component {
     this.setState({ search: s });
   };
   clearSearch = () => {
-    this.setState({ search: "" });
-    this.goHome();
+    this.setState({ search: ""});
+    // this.goHome();
   };
   goHome = () => {
     this.setState({
@@ -54,10 +56,12 @@ class App extends Component {
       watchedPage: false,
       searchPage: false
     });
+    this.forceUpdate();
   };
 
   goTolist = () => {
     this.setState({ toWatchPage: true, watchedPage: false, searchPage: false });
+    this.forceUpdate();
   };
   addToWatched = movie => {
     let cloneOfuserMovies = this.state.userMovies.slice(0);
@@ -71,8 +75,17 @@ class App extends Component {
       userMovies: cloneOfuserMovies
     });
   };
+  remove = (movie) => {
+    console.log('here', movie);
+    
+    let cloneOfuserMovies = this.state.userWatched.slice(0);
+    let indexOf = cloneOfuserMovies.indexOf(movie);
+    cloneOfuserMovies.splice(indexOf, 1);
+    this.setState({userWatched: cloneOfuserMovies})
+  }
   goToWatched = () => {
     this.setState({ toWatchPage: false, watchedPage: true, searchPage: false });
+    this.forceUpdate();
   };
 
   render() {
@@ -80,6 +93,7 @@ class App extends Component {
       return (
         <div>
           <Header
+            clearSearch={this.clearSearch}
             search={this.search}
             goHome={this.goHome}
             goTolist={this.goTolist}
@@ -103,6 +117,7 @@ class App extends Component {
       return (
         <div>
           <Header
+            clearSearch={this.clearSearch}
             search={this.search}
             goHome={this.goHome}
             goToWatched={this.goToWatched}
@@ -111,6 +126,7 @@ class App extends Component {
           <Profile
             addToWatched={this.addToWatched}
             movies={this.state.userMovies}
+            watchedPage={true}
           />
         </div>
       );
@@ -118,13 +134,15 @@ class App extends Component {
       return (
         <div>
           <Header
+            clearSearch={this.clearSearch}
             search={this.search}
             goHome={this.goHome}
             goTolist={this.goTolist}
           />
           <Profile
-            addToWatched={this.addToWatched}
+            addToWatched={this.remove}
             movies={this.state.userWatched}
+            watchedPage={false}
           />
         </div>
       );
@@ -132,6 +150,7 @@ class App extends Component {
       return (
         <div>
           <Header
+            clearSearch={this.clearSearch}
             search={this.search}
             goHome={this.goHome}
             goTolist={this.goTolist}

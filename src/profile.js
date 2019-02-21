@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-
+import swal from 'sweetalert';
 class Profile extends React.Component {
     
 
@@ -8,7 +8,8 @@ class Profile extends React.Component {
 
     }
     render(){
-        
+        let buttonName = this.props.watchedPage ? 'Watched' : 'Delete';
+        // let message = this.props.watchedPage ? 'Watched' : 'Delete';
         let movies = this.props.movies.map((movie,index) => 
         <div key={index} style={{ display: 'flex', border: '1px solid black' }}>
             <div className='toWatchImg'>
@@ -21,7 +22,9 @@ class Profile extends React.Component {
                     <p>Release: {movie.release_date}</p>
               <p>Rating: {movie.vote_average}</p>
              
-                   <button onClick={()=>this.props.addToWatched(movie)}>Watched</button>
+                    <button className='btn btn-secondary' onClick={() => {
+                        swal("Done!", buttonName, "success");
+                        this.props.addToWatched(movie)}}>{buttonName}</button>
             </div>
             
         </div>)

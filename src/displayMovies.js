@@ -21,12 +21,12 @@ class DisplayMovies extends React.Component {
 
         }
         let style= {
-            margin: '40% 0'
+            margin: '50% 0'
         }
         let bgd1 = {
             backgroundSize: 'cover',
             background: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path}) center no-repeat `,
-            zIndex: '1'
+            zIndex: '1',
         // backgroundPosition: 'center',
         }
         
@@ -49,10 +49,7 @@ class DisplayMovies extends React.Component {
                     this.setState({display: false})
                 }}>X</button></div>
                 </div>
-                <div className='row'><div className='col -l'>
                 
-                </div>
-                </div>
             
         </div>
         // console.log('hhheerre',movie);
@@ -63,10 +60,10 @@ class DisplayMovies extends React.Component {
         
         this.setState({Info : movie, display: true});
     }
-    CSearch = () => {
+    // CSearch = () => {
         
-        this.props.clearSearch()
-    }
+    //     this.props.clearSearch()
+    // }
 
     render(){
 

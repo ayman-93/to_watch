@@ -40,7 +40,7 @@ body {
 .info {
   border-radius: 15px;
   
-  background: rgb(212, 207, 207);
+  background: rgba(212, 207, 207, .7);
   /* margin-left: 1px; */
   margin-top: 25px;
   /* width: 95%; */
@@ -69,7 +69,7 @@ body {
 }
 .d2 {
      /* display: inline-flexbox; */
-     color: black;
+     /* color: black; */
       /* float: right; */
        /* width: 51%; */
        /* height: 100%; */
@@ -93,15 +93,17 @@ body {
 }
 .buttons {
   /* border: 1px solid blue; */
-  position: relative;
-  width: 20px !important; 
+  /* position: relative; */
+  /* width: 20px !important;  */
+  /* border: 2px dashed black; */
+  /* height: 100%; */
 }
 #b1{
-  position: absolute;
+  /* position: absolute; */
   /* top:1px; */
-  height: 100%;
-  left:67px;
-background-color: black;
+  /* height: 100%; */
+  /* left:67px; */
+/* background-color: black; */
 }
 #b2{
   position: absolute;
@@ -120,6 +122,11 @@ color:white;
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
+  /* border: 2px solid whitesmoke; */
+  box-shadow: -4px 0px 10px lightblue;
+  border-radius: 15px 0 0 15px;
+  /* height: 200px; */
+  /* background-csolor: red;  */
 }
 h1 {
   /* font-family: 'Coiny', cursive; */

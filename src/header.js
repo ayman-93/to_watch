@@ -30,9 +30,15 @@ class Header extends React.Component {
                     
                 </ul>
                 <form className="form-inline my-2 my-lg-0" onSubmit={(event) => {
+                    event.preventDefault();
+                   this.props.clearSearch();
                      this.props.search(this.state.search);
                      this.setState({search : ''})
-                      event.preventDefault()}}>
+                    this.forceUpdate();
+                    console.log('search');
+                    
+                    
+                      }}>
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value={this.state.search} onChange={this.updateSearch} />
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
