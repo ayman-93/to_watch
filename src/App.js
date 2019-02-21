@@ -15,24 +15,26 @@ import swal from 'sweetalert';
 
 class App extends Component {
   state = {
-    movies: [],
+    movies: [], //for now this going to display top rated movies
     userMovies: [],
     userWatched: [],
     search: "",
     toWatchPage: false,
     watchedPage: false,
     searchPage: false,
-    searchList: []
+    searchList: [] //this is going to hold the response from the search component
   };
+// getMovies function for take the response from movies component and store it in this.state.movies 
+getMovies = newMovies => {
+  this.setState({ movies: newMovies });
+};
 
-  getMovies = newMovies => {
-    this.setState({ movies: newMovies });
-  };
+// getSearchList function for take the response from Search component and store it in this.state.searchList
+getSearchList = newSearchList => {
+  this.setState({ searchList: newSearchList})
+}
 
-  getSearchList = newSearchList => {
-    this.setState({ searchList: newSearchList})
-  }
-
+// sendMovies() get selected movie from displayMovies component and check if the movie in the list if not it will push it to userMovies
   sendMovies = m => {
     console.log("woow", m);
     swal("Added to your list", "", "success");
